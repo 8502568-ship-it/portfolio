@@ -4,6 +4,7 @@ export default function Nav({ page, setPage }) {
   const [active, setActive] = useState("about");
 
   useEffect(() => {
+    if (page !== "portfolio") return;
     const sections = ["about", "skills", "projects", "contact"];
     const observer = new IntersectionObserver(
       (entries) => {
@@ -18,11 +19,11 @@ export default function Nav({ page, setPage }) {
       if (el) observer.observe(el);
     });
     return () => observer.disconnect();
-  }, []);
+  }, [page]);
 
   return (
     <nav className="nav">
-      <span className="nav-logo">Portfolio</span>
+      <span className="nav-logo">{"<Portfolio />"}</span>
 
       <ul className="nav-links">
         <li>
@@ -67,6 +68,20 @@ export default function Nav({ page, setPage }) {
           className={page === "chess" ? "switcher-btn active" : "switcher-btn"}
         >
           ♟ Chess
+        </button>
+        <button
+          onClick={() => setPage("schedule")}
+          className={
+            page === "schedule" ? "switcher-btn active" : "switcher-btn"
+          }
+        >
+          📅 Розклад
+        </button>
+        <button
+          onClick={() => setPage("google")}
+          className={page === "google" ? "switcher-btn active" : "switcher-btn"}
+        >
+          🔍 Google
         </button>
       </div>
     </nav>
