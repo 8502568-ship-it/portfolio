@@ -11,7 +11,7 @@ export default function Schedule() {
     <div className="schedule-root">
       <h1 className="schedule-title">Розклад занять</h1>
       <p className="schedule-subtitle">
-        1 курс · Група ІП-__ · 2025/2026 навчальний рік
+        1 курс · Група Б-123-3-РІ · 2025/2026 навчальний рік
       </p>
 
       <div className="schedule-wrap">
