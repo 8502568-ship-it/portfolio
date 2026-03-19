@@ -83,6 +83,22 @@ export default function Nav({ page, setPage }) {
         >
           🔍 Google
         </button>
+
+        <button
+          onClick={() => setPage("booking")}
+          className={
+            page === "booking" ? "switcher-btn active" : "switcher-btn"
+          }
+        >
+          📖 Booking
+        </button>
+
+        <button
+          onClick={() => setPage("survey")}
+          className={page === "survey" ? "switcher-btn active" : "switcher-btn"}
+        >
+          📝 Survey
+        </button>
       </div>
     </nav>
   );

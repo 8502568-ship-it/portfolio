@@ -1,5 +1,3 @@
-import ChessBoard from "./ChessBoard";
-
 export default function ChessNav({ setPage }) {
   return (
     <nav className="nav">
