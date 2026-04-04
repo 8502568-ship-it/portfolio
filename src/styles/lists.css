@@ -1,0 +1,37 @@
+.lists {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.lists-games .lists-item:nth-child(2n) {
+    background: rgba(65, 206, 0, 0.14);
+    color: #318913;
+    border-radius: 2px;
+    padding: 6px 0;
+}
+
+.lists-watch .lists-item:nth-child(3n + 2) {
+    background: rgba(249, 115, 22, 0.2);
+    color: #9a3412;
+    padding: 6px 0px;
+    border-radius: 4px;
+}
+
+.lists-subjects .lists-row:first-child,
+.lists-subjects .lists-row:last-child {
+    background: rgba(15, 118, 110, 0.14);
+    border-radius: 2px;
+    color: #0f766e;
+    padding: 6px 0;
+}
+
+.lists-term {
+    font-weight: 700;
+}
+
+.lists-description {
+    margin: 0;
+    color: #1f2937;
+}

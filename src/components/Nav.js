@@ -83,7 +83,6 @@ export default function Nav({ page, setPage }) {
         >
           🔍 Google
         </button>
-
         <button
           onClick={() => setPage("booking")}
           className={
@@ -92,12 +91,25 @@ export default function Nav({ page, setPage }) {
         >
           📖 Booking
         </button>
-
         <button
           onClick={() => setPage("survey")}
           className={page === "survey" ? "switcher-btn active" : "switcher-btn"}
         >
           📝 Survey
+        </button>
+        <button
+          onClick={() => setPage("lists")}
+          className={page === "lists" ? "switcher-btn active" : "switcher-btn"}
+        >
+          📋 Lists
+        </button>
+        <button
+          onClick={() => setPage("calendar")}
+          className={
+            page === "calendar" ? "switcher-btn active" : "switcher-btn"
+          }
+        >
+          📅 Calendar
         </button>
       </div>
     </nav>

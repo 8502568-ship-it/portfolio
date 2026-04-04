@@ -1,0 +1,86 @@
+table{
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 900px;
+    text-align: left;
+}
+
+caption {
+    display: table-caption;
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
+    text-align: center;
+    caption-side: top;
+}
+
+table thead {
+    background: rgba(15, 118, 110, 0.14);
+    color: #0f766e;
+}
+
+thead th {
+  text-align: center;
+  background-color: #f0f0f0;
+  font-weight: bold;
+  padding: 8px;
+}
+
+/* Усі дні */
+tbody td {
+  border: 1px solid #ccc;
+  padding: 12px;
+}
+
+tbody td:nth-child(6),
+tbody td:nth-child(7) {
+  color: green;
+}
+
+tbody tr:nth-child(1) td:nth-child(3),
+tbody tr:nth-child(5) td:nth-child(2) {
+  color: red;
+  font-weight: 700;
+}
+
+tbody tr:nth-child(1) td:nth-child(3):hover,
+tbody tr:nth-child(5) td:nth-child(2):hover {
+  color: darkred;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+tbody tr:nth-child(1) td:nth-child(3):active,
+tbody tr:nth-child(5) td:nth-child(2):active {
+  background: rgba(59, 130, 246, 0.14);
+}
+
+tbody tr:nth-child(5) td:nth-child(3) {
+  color: blue;
+  font-weight: 700;
+}
+
+tbody tr:nth-child(5) td:nth-child(3):hover {
+  color: darkblue;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+tbody tr:nth-child(5) td:nth-child(3):active {
+  background: rgba(59, 130, 246, 0.14);
+}
+
+tbody td:empty {
+  color: #aaa;
+}
+
+table + p {
+  margin: 14px auto 0;
+  width: fit-content;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: rgba(247, 250, 255, 0.14);
+  color: #000000;
+  font-weight: 700;
+}
