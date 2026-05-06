@@ -111,6 +111,20 @@ export default function Nav({ page, setPage }) {
         >
           📅 Calendar
         </button>
+        <button
+          onClick={() => setPage("youtube")}
+          className={
+            page === "youtube" ? "switcher-btn active" : "switcher-btn"
+          }
+        >
+          ▶ YouTube
+        </button>
+        <button
+          onClick={() => setPage("figma")}
+          className={page === "figma" ? "switcher-btn active" : "switcher-btn"}
+        >
+          🎨 Figma Layout
+        </button>
       </div>
     </nav>
   );

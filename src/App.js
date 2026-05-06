@@ -8,6 +8,8 @@ import Booking from "./components/Booking";
 import Survey from "./components/Survey";
 import Lists from "./components/Lists";
 import Calendar from "./components/Calendar";
+import YouTubeClone from "./components/YouTubeClone";
+import FigmaLayout from "./components/FigmaLayout";
 
 export default function App() {
   const [page, setPage] = useState("portfolio");
@@ -21,6 +23,8 @@ export default function App() {
     survey: <Survey />,
     lists: <Lists />,
     calendar: <Calendar />,
+    youtube: <YouTubeClone setPage={setPage} />,
+    figma: <FigmaLayout setPage={setPage} />,
   };
 
   return <div>{pages[page]}</div>;

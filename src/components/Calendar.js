@@ -26,8 +26,8 @@ export default function Calendar() {
 
         <tbody>
           <tr>
-            <td></td>
-            <td></td>
+            <td>29</td>
+            <td>30</td>
             <td onClick={() => toggleMessage("holiday")}>1</td>
             <td>2</td>
             <td>3</td>
@@ -71,8 +71,8 @@ export default function Calendar() {
             <td onClick={() => toggleMessage("birthday")}>29</td>
             <td>30</td>
             <td>31</td>
-            <td></td>
-            <td></td>
+            <td>1</td>
+            <td>2</td>
           </tr>
         </tbody>
       </table>
