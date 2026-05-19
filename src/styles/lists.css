@@ -3,27 +3,56 @@
     flex-direction: column;
     gap: 20px;
     padding: 20px;
+    --lists-highlight: #f97316;
+    --lists-highlight-text: #ffffff;
+}
+
+.lists-title {
+    font-size: 2rem;
+}
+
+.lists-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border-radius: 16px;
+    background: rgba(15, 23, 42, 0.05);
+    width: fit-content;
+}
+
+.lists-color-label {
+    font-weight: 700;
+}
+
+.lists-color-input {
+    width: 52px;
+    height: 40px;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
 }
 
 .lists-games .lists-item:nth-child(2n) {
-    background: rgba(65, 206, 0, 0.14);
-    color: #318913;
+    background: var(--lists-highlight);
+    color: var(--lists-highlight-text);
     border-radius: 2px;
     padding: 6px 0;
 }
 
 .lists-watch .lists-item:nth-child(3n + 2) {
-    background: rgba(249, 115, 22, 0.2);
-    color: #9a3412;
+    background: var(--lists-highlight);
+    color: var(--lists-highlight-text);
     padding: 6px 0px;
     border-radius: 4px;
 }
 
 .lists-subjects .lists-row:first-child,
 .lists-subjects .lists-row:last-child {
-    background: rgba(15, 118, 110, 0.14);
+    background: var(--lists-highlight);
     border-radius: 2px;
-    color: #0f766e;
+    color: var(--lists-highlight-text);
     padding: 6px 0;
 }
 

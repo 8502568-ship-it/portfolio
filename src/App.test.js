@@ -1,8 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders shared labs homepage", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByText(/Лабораторні роботи команди/i)).toBeInTheDocument();
+  expect(
+    screen.getByText(/Календар із переходом між місяцями/i),
+  ).toBeInTheDocument();
 });

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../styles/youtube.css";
 
-export default function YouTubeClone({ setPage }) {
+export default function YouTubeClone() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("home");
   const [selectedVideo, setSelectedVideo] = useState(null);
@@ -18,24 +18,6 @@ export default function YouTubeClone({ setPage }) {
     },
     {
       id: 2,
-      title: "React Hooks Explained",
-      channel: "Code Masters",
-      views: "850K views",
-      time: "15:30",
-      thumbnail: "https://img.youtube.com/vi/j6CgKvBmtzs/maxresdefault.jpg",
-      videoId: "j6CgKvBmtzs",
-    },
-    {
-      id: 3,
-      title: "JavaScript Advanced Concepts",
-      channel: "JavaScript Pro",
-      views: "520K views",
-      time: "22:15",
-      thumbnail: "https://img.youtube.com/vi/1MZ7WQZQJCw/maxresdefault.jpg",
-      videoId: "1MZ7WQZQJCw",
-    },
-    {
-      id: 4,
       title: "CSS Flexbox Complete Guide",
       channel: "Design Basics",
       views: "950K views",
@@ -44,16 +26,7 @@ export default function YouTubeClone({ setPage }) {
       videoId: "tXIhdp5R7sc",
     },
     {
-      id: 5,
-      title: "Web Design Best Practices",
-      channel: "UX Experts",
-      views: "670K views",
-      time: "14:20",
-      thumbnail: "https://img.youtube.com/vi/LlYcSYoNbyQ/maxresdefault.jpg",
-      videoId: "LlYcSYoNbyQ",
-    },
-    {
-      id: 6,
+      id: 3,
       title: "Node.js Backend Development",
       channel: "Backend Masters",
       views: "430K views",
@@ -62,7 +35,7 @@ export default function YouTubeClone({ setPage }) {
       videoId: "TlB_eWDSMt4",
     },
     {
-      id: 7,
+      id: 4,
       title: "Database Design Fundamentals",
       channel: "Data Science Hub",
       views: "580K views",
@@ -71,7 +44,7 @@ export default function YouTubeClone({ setPage }) {
       videoId: "ztHopE5Wnpc",
     },
     {
-      id: 8,
+      id: 5,
       title: "API Development with Express",
       channel: "Web Dev Pro",
       views: "720K views",
@@ -188,14 +161,6 @@ export default function YouTubeClone({ setPage }) {
           </div>
         </div>
       )}
-
-      {/* Back Button */}
-      <button
-        className="back-btn"
-        onClick={() => setPage && setPage("portfolio")}
-      >
-        ← Back to Portfolio
-      </button>
     </div>
   );
 }

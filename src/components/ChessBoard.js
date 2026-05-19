@@ -34,7 +34,7 @@ function isBlack(piece) {
   return piece !== "." && piece === piece.toLowerCase();
 }
 
-export default function ChessBoard({ setPage }) {
+export default function ChessBoard() {
   const [board, setBoard] = useState(INITIAL_BOARD.map((r) => [...r]));
   const [selected, setSelected] = useState(null);
   const [turn, setTurn] = useState("white");
@@ -96,7 +96,7 @@ export default function ChessBoard({ setPage }) {
   return (
     <div className="chess-root">
       <h1 className="chess-title">♟ Chess Board</h1>
-      <ChessNav setPage={setPage} />
+      <ChessNav />
 
       <div className="chess-status">
         <div className={`turn-dot ${turn}`} />

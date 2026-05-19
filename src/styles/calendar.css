@@ -1,4 +1,35 @@
-table{
+.calendar-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.calendar-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.calendar-controls__label {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111827;
+  text-transform: capitalize;
+}
+
+.calendar-nav-btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: #111827;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.calendar-table{
     margin: 0 auto;
     border-collapse: collapse;
     width: 100%;
@@ -7,7 +38,7 @@ table{
 }
 
 caption {
-    display: table-caption;
+  display: table-caption;
     font-size: 1.5em;
     margin: 10px 0;
     color: #333;
@@ -75,7 +106,20 @@ tbody td:empty {
   color: #aaa;
 }
 
-table + p {
+.calendar-day {
+  cursor: pointer;
+}
+
+.calendar-day--muted {
+  color: #94a3b8;
+  background: rgba(148, 163, 184, 0.08);
+}
+
+.calendar-day--event {
+  font-weight: 700;
+}
+
+.calendar-table + p {
   margin: 14px auto 0;
   width: fit-content;
   padding: 8px 14px;

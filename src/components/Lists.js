@@ -1,9 +1,41 @@
+import { useMemo, useState } from "react";
 import "../styles/lists.css";
 
 export default function Lists() {
+  const [highlightColor, setHighlightColor] = useState("#f97316");
+
+  const highlightTextColor = useMemo(() => {
+    const value = highlightColor.replace("#", "");
+    const red = Number.parseInt(value.slice(0, 2), 16);
+    const green = Number.parseInt(value.slice(2, 4), 16);
+    const blue = Number.parseInt(value.slice(4, 6), 16);
+    const luminance = (0.299 * red + 0.587 * green + 0.114 * blue) / 255;
+    return luminance > 0.6 ? "#111827" : "#ffffff";
+  }, [highlightColor]);
+
   return (
-    <section id="lists" className="lists">
+    <section
+      id="lists"
+      className="lists"
+      style={{
+        "--lists-highlight": highlightColor,
+        "--lists-highlight-text": highlightTextColor,
+      }}
+    >
       <h1 className="lists-title">My Favorite Lists</h1>
+
+      <div className="lists-controls">
+        <label className="lists-color-label" htmlFor="lists-color">
+          Колір виділення:
+        </label>
+        <input
+          id="lists-color"
+          type="color"
+          className="lists-color-input"
+          value={highlightColor}
+          onChange={(event) => setHighlightColor(event.target.value)}
+        />
+      </div>
 
       <h2 className="lists-label">Favorite games:</h2>
       <ul className="lists-list lists-games">
